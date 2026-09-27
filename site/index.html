@@ -370,11 +370,11 @@ details.block>summary .bp{font-family:var(--mono);font-size:12px;color:var(--ink
 'use strict';
 const LEVELS=[
   {code:'A1',name:'Breakthrough',file:'guide/01-A1.md',hours:130},
-  {code:'A2',name:'Waystage',file:'guide/02-A2.md',hours:180},
-  {code:'B1',name:'Threshold',file:'guide/03-B1.md',hours:380},
-  {code:'B2',name:'Vantage',file:'guide/04-B2.md',hours:480},
-  {code:'C1',name:'Effective proficiency',file:'guide/05-C1.md',hours:560},
-  {code:'C2',name:'Mastery',file:'guide/06-C2.md',hours:600},
+  {code:'A2',name:'Waystage',file:'guide/02-A2.md',hours:210},
+  {code:'B1',name:'Threshold',file:'guide/03-B1.md',hours:470},
+  {code:'B2',name:'Vantage',file:'guide/04-B2.md',hours:580},
+  {code:'C1',name:'Effective proficiency',file:'guide/05-C1.md',hours:640},
+  {code:'C2',name:'Mastery',file:'guide/06-C2.md',hours:630},
 ];
 const TOTAL_HOURS=LEVELS.reduce((a,l)=>a+l.hours,0);
 const HABITS=[
@@ -382,6 +382,8 @@ const HABITS=[
   {key:'speak',label:'Spoke Spanish aloud',from:'A1-015'},
   {key:'ds',label:'Dreaming Spanish, 15 minutes',from:'A1-027'},
   {key:'diario',label:'Diario entry written',from:'A1-074'},
+  {key:'voice',label:'AI voice session (3 a week)',from:'A2-029'},
+  {key:'news',label:'News article read (3 a week)',from:'A2-030'},
 ];
 const DEFAULT_STATE=()=>({done:{},notes:{},checks:{},habits:{},settings:{minsPerDay:80,start:''}});
 
