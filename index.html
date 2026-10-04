@@ -378,24 +378,25 @@ details.block>summary .bp{font-family:var(--mono);font-size:12px;color:var(--ink
 'use strict';
 const LEVELS=[
   {code:'A1',name:'Breakthrough',file:'guide/01-A1.md',hours:200},
-  {code:'A2',name:'Waystage',file:'guide/02-A2.md',hours:360},
-  {code:'B1',name:'Threshold',file:'guide/03-B1.md',hours:780},
-  {code:'B2',name:'Vantage',file:'guide/04-B2.md',hours:1000},
-  {code:'C1',name:'Effective proficiency',file:'guide/05-C1.md',hours:950},
-  {code:'C2',name:'Mastery',file:'guide/06-C2.md',hours:960},
+  {code:'A2',name:'Waystage',file:'guide/02-A2.md',hours:440},
+  {code:'B1',name:'Threshold',file:'guide/03-B1.md',hours:830},
+  {code:'B2',name:'Vantage',file:'guide/04-B2.md',hours:1030},
+  {code:'C1',name:'Effective proficiency',file:'guide/05-C1.md',hours:1080},
+  {code:'C2',name:'Mastery',file:'guide/06-C2.md',hours:1230},
 ];
 const TOTAL_HOURS=LEVELS.reduce((a,l)=>a+l.hours,0);
 const HABITS=[
   {key:'anki',label:'Anki reviews cleared',from:'A1-004'},
   {key:'speak',label:'Spoke Spanish aloud',from:'A1-015'},
-  {key:'ds',label:'Dreaming Spanish (15 to 40 min)',from:'A1-027'},
-  {key:'kids',label:'Children\'s TV episode',from:'A1-038'},
-  {key:'commute',label:'Commute slot, listening only',from:'A1-139'},
-  {key:'free',label:'Free reading',from:'A2-110'},
-  {key:'series',label:'Weekly series episode',from:'B1-016'},
-  {key:'diario',label:'Diario entry written',from:'A1-075'},
-  {key:'voice',label:'AI voice session (3 a week)',from:'A2-031'},
-  {key:'news',label:'News article read (3 a week)',from:'A2-032'},
+  {key:'lt',label:'Language Transfer, two tracks',from:'A1-024',until:'A1-162'},
+  {key:'commute',label:'Commute slot, listening only',from:'A1-163'},
+  {key:'ds',label:'Dreaming Spanish (15 to 40 min)',from:'A1-029',until:'A2-331'},
+  {key:'song',label:'Daily song or poem',from:'A1-038'},
+  {key:'kids',label:'Children\'s TV episode',from:'A1-041',until:'A1-178'},
+  {key:'diario',label:'Diario entry written',from:'A1-082'},
+  {key:'voice',label:'AI voice session',from:'A2-034'},
+  {key:'free',label:'Free reading',from:'A2-137'},
+  {key:'news',label:'Newspaper article(s)',from:'B2-010'},
 ];
 const DEFAULT_STATE=()=>({done:{},notes:{},checks:{},habits:{},settings:{minsPerDay:80,start:''}});
 
